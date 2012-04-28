@@ -1,14 +1,21 @@
 %table{ :class => "scorecard" }
   %thead
     %tr
-      %td Name
-      - @scores.each do |hole, score|
-        %td
-          = hole
-  %tbody
-    %tr
+      %td
+        Hole
       %td
         = @name
-      - @scores.each do |hole, score|
+  %tbody
+    - @scores.each do |hole, score|
+      %tr
         %td
-          = score
+          = hole
+        %td
+          %a{"data-transition" => "slide", :href => "/hole/#{hole}/score"}
+            = score
+  %tfood
+    %tr
+      %td
+        Total
+      %td
+        = @total

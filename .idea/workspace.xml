@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6afeb219-c847-47a1-8929-f246a373863e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.haml" afterPath="$PROJECT_DIR$/views/layout.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/score.haml" afterPath="$PROJECT_DIR$/views/score.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/scorecard.haml" afterPath="$PROJECT_DIR$/views/scorecard.haml" />
     </list>
     <ignored path="DiscGolfScorerMobile.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,7 +36,7 @@
       <file leaf-file-name="score.haml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/score.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="13" selection-start="523" selection-end="523" vertical-scroll-proportion="0.4373928">
+            <state line="6" column="40" selection-start="197" selection-end="197" vertical-scroll-proportion="0.17495711">
               <folding />
             </state>
           </provider>
@@ -456,7 +453,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/score.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="523" selection-end="523" vertical-scroll-proportion="0.4373928">
+        <state line="6" column="40" selection-start="197" selection-end="197" vertical-scroll-proportion="0.17495711">
           <folding />
         </state>
       </provider>

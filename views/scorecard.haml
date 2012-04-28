@@ -11,7 +11,8 @@
   - @scores.each do |hole, score|
     %div{ :class => "ui-bar ui-bar-c"}
       %div{ :class => "ui-block-a" }
-        = hole
+        %h3
+          = hole
       %div{ :class => "ui-block-b" }
         %a{"data-role" => "button", "data-inline" => "true", "data-direction" => "reverse", "data-transition" => "fade", "data-theme" => "e", :href => "/hole/#{hole}/score", "data-icon" => "plus", "data-iconpos" => "left" }
           = score

@@ -10,4 +10,8 @@
     %script{ src: "http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js" }
     %script{ src: "/app.js" }
   %body
-    = yield
+    %div{ "data-theme" => "a", "data-role" => "header", "data-position" => "fixed" }
+      %h3
+        Disc Golf Scorer Mobile
+    %div{ "data-role" => "content" }
+      = yield

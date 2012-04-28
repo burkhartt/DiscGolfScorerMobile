@@ -1,21 +1,19 @@
-%table{ :class => "scorecard" }
-  %thead
-    %tr
-      %td
+%div{ "data-role" => "page", "data-theme" => "a", "data-content-theme" => "a" }
+  %div{ :class => "ui-grid-a" }
+    %div{ :class => "ui-bar ui-bar-a" }
+      %div{ :class => "ui-block-a" }
         Hole
-      %td
+      %div{ :class => "ui-block-b" }
         = @name
-  %tbody
     - @scores.each do |hole, score|
-      %tr
-        %td
+      %div{ :class => "ui-bar ui-bar-a"}
+        %div{ :class => "ui-block-a" }
           = hole
-        %td
-          %a{"data-transition" => "slide", :href => "/hole/#{hole}/score"}
+        %div{ :class => "ui-block-b" }
+          %a{"data-role" => "button", "data-inline" => "true", "data-direction" => "reverse", "data-transition" => "fade", "data-theme" => "e", :href => "/hole/#{hole}/score", "data-icon" => "plus", "data-iconpos" => "left" }
             = score
-  %tfood
-    %tr
-      %td
+    %div{ :class => "ui-bar ui-bar-a"}
+      %div{ :class => "ui-block-a" }
         Total
-      %td
+      %div{ :class => "ui-block-b" }
         = @total

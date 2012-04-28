@@ -1,0 +1,14 @@
+%table{ :class => "scorecard" }
+  %thead
+    %tr
+      %td Name
+      - @scores.each do |hole, score|
+        %td
+          = hole
+  %tbody
+    %tr
+      %td
+        = @name
+      - @scores.each do |hole, score|
+        %td
+          = score

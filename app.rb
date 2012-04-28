@@ -16,7 +16,7 @@ get '/' do
   end
 
   @total = @scores.values.inject(:+)
-  @name = "Tim"
+  @name = "Player 1"
   haml :scorecard
 end
 

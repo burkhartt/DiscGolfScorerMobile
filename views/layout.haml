@@ -11,8 +11,4 @@
     %script{ src: "/app.js" }
   %body
     %div{ "data-role" => "page", "data-theme" => "a", "data-content-theme" => "a" }
-      %div{ "data-theme" => "a", "data-role" => "header", "data-position" => "fixed" }
-        %h3
-          DG Score
-      %div{ "data-role" => "content" }
-        = yield
+      = yield

@@ -1,9 +1,13 @@
-%div{ :class => "ui-grid-a" }
-  %div{ :class => "ui-bar ui-bar-b" }
+%div{ "data-theme" => "a", "data-role" => "header", "data-position" => "fixed" }
+  %div{ :class => "ui-grid-a" }
     %div{ :class => "ui-block-a" }
-      Hole
+      %h3
+        Hole
     %div{ :class => "ui-block-b" }
-      = @name
+      %h3
+        = @name
+
+%div{ :class => "ui-grid-a" }
   - @scores.each do |hole, score|
     %div{ :class => "ui-bar ui-bar-c"}
       %div{ :class => "ui-block-a" }
@@ -11,8 +15,12 @@
       %div{ :class => "ui-block-b" }
         %a{"data-role" => "button", "data-inline" => "true", "data-direction" => "reverse", "data-transition" => "fade", "data-theme" => "e", :href => "/hole/#{hole}/score", "data-icon" => "plus", "data-iconpos" => "left" }
           = score
-  %div{ :class => "ui-bar ui-bar-b"}
+
+%div{ "data-theme" => "b", "data-role" => "footer", "data-position" => "fixed" }
+  %div{ :class => "ui-grid-a" }
     %div{ :class => "ui-block-a" }
-      Total
+      %h3
+        Total
     %div{ :class => "ui-block-b" }
-      = @total
+      %h3
+        = @total

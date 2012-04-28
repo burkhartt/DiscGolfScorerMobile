@@ -1,17 +1,27 @@
 = @error
 
 %form{ id: "score", name: "score", action: "", method: "post"}
-  %div{ "data-role" => "fieldcontain" }
-    %label{ "for" => "score" }
-      Score:
-    %select{ "data-native-menu" => "true", "name" => "score", "id" => "score" }
-      %option{ "value" => "1" } 1
-      %option{ "value" => "2" } 2
-      %option{ "value" => "3" } 3
-      %option{ "value" => "4" } 4
-      %option{ "value" => "5" } 5
-      %option{ "value" => "6" } 6
-      %option{ "value" => "7" } 7
-      %option{ "value" => "8" } 8
-      %option{ "value" => "9" } 9
-    %input{ "data-theme" => "b", "data-icon" => "check", "data-iconpos" => "left", "value" => "Save", "type" => "submit" }
+  %input{ "type" => "hidden", "name" => "score", "id" => "score", "value" => "3" }
+
+  %div{ "data-role" => "content" }
+    %div{ "class" => "ui-grid-b" }
+      %div{ "class" => "ui-block-a" }
+        %input{ "data-theme" => "b", "value" => "1", "type" => "button", "onclick" => "$('input[id=\"score\"]').val('1'); $('form').submit()" }
+      %div{ "class" => "ui-block-b" }
+        %input{ "data-theme" => "b", "value" => "2", "type" => "button", "onclick" => "$('input[id=\"score\"]').val('2'); $('form').submit()" }
+      %div{ "class" => "ui-block-b" }
+        %input{ "data-theme" => "b", "value" => "3", "type" => "button", "onclick" => "$('input[id=\"score\"]').val('3'); $('form').submit()" }
+
+      %div{ "class" => "ui-block-a" }
+        %input{ "data-theme" => "b", "value" => "4", "type" => "button", "onclick" => "$('input[id=\"score\"]').val('4'); $('form').submit()" }
+      %div{ "class" => "ui-block-b" }
+        %input{ "data-theme" => "b", "value" => "5", "type" => "button", "onclick" => "$('input[id=\"score\"]').val('5'); $('form').submit()" }
+      %div{ "class" => "ui-block-b" }
+        %input{ "data-theme" => "b", "value" => "6", "type" => "button", "onclick" => "$('input[id=\"score\"]').val('6'); $('form').submit()" }
+
+      %div{ "class" => "ui-block-a" }
+        %input{ "data-theme" => "b", "value" => "7", "type" => "button", "onclick" => "$('input[id=\"score\"]').val('7'); $('form').submit()" }
+      %div{ "class" => "ui-block-b" }
+        %input{ "data-theme" => "b", "value" => "8", "type" => "button", "onclick" => "$('input[id=\"score\"]').val('8'); $('form').submit()" }
+      %div{ "class" => "ui-block-b" }
+        %input{ "data-theme" => "b", "value" => "9", "type" => "button", "onclick" => "$('input[id=\"score\"]').val('9'); $('form').submit()" }

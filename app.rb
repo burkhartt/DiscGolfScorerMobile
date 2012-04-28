@@ -6,10 +6,12 @@ enable :sessions
 get '/' do
   @scores = {}
   until @scores.length == 18
+    index = @scores.length + 1
+
     if session[@scores.length + 1].nil?
-      @scores[@scores.length + 1] = 0
+      @scores[index] = 0
     else
-      @scores[@scores.length + 1] = session[@scores.length + 1]
+      @scores[index] = session[index]
     end
   end
 
@@ -30,15 +32,10 @@ get '/reset' do
 end
 
 post '/hole/:hole_number/score' do
-  if integer? params[:score]
-    @score = Integer params[:score]
-    @hole_number = params[:hole_number]
-    session[@hole_number] = @score
-    redirect '/'
-  else
-    @error = "That is not a number"
-    haml :score
-  end
+  @score = Integer params[:score]
+  @hole_number = params[:hole_number]
+  session[@hole_number] = @score
+  redirect '/'
 end
 
 def integer?(object)

@@ -1,19 +1,18 @@
-%div{ "data-role" => "page", "data-theme" => "a", "data-content-theme" => "a" }
-  %div{ :class => "ui-grid-a" }
-    %div{ :class => "ui-bar ui-bar-a" }
+%div{ :class => "ui-grid-a" }
+  %div{ :class => "ui-bar ui-bar-b" }
+    %div{ :class => "ui-block-a" }
+      Hole
+    %div{ :class => "ui-block-b" }
+      = @name
+  - @scores.each do |hole, score|
+    %div{ :class => "ui-bar ui-bar-c"}
       %div{ :class => "ui-block-a" }
-        Hole
+        = hole
       %div{ :class => "ui-block-b" }
-        = @name
-    - @scores.each do |hole, score|
-      %div{ :class => "ui-bar ui-bar-a"}
-        %div{ :class => "ui-block-a" }
-          = hole
-        %div{ :class => "ui-block-b" }
-          %a{"data-role" => "button", "data-inline" => "true", "data-direction" => "reverse", "data-transition" => "fade", "data-theme" => "e", :href => "/hole/#{hole}/score", "data-icon" => "plus", "data-iconpos" => "left" }
-            = score
-    %div{ :class => "ui-bar ui-bar-a"}
-      %div{ :class => "ui-block-a" }
-        Total
-      %div{ :class => "ui-block-b" }
-        = @total
+        %a{"data-role" => "button", "data-inline" => "true", "data-direction" => "reverse", "data-transition" => "fade", "data-theme" => "e", :href => "/hole/#{hole}/score", "data-icon" => "plus", "data-iconpos" => "left" }
+          = score
+  %div{ :class => "ui-bar ui-bar-b"}
+    %div{ :class => "ui-block-a" }
+      Total
+    %div{ :class => "ui-block-b" }
+      = @total
